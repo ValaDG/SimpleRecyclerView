@@ -36,9 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
     mView.setAdapter(mAdapter);
 
-
-
-
   }
 
   public void addElementsToArray() {

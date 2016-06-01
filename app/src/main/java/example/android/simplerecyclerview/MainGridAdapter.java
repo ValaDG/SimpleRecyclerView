@@ -53,28 +53,26 @@ public class MainGridAdapter extends RecyclerView.Adapter<MainGridAdapter.Recycl
     return mArray.size();
   }
 
+  // helper method to manipulate the internal Array from the Main Activity
   public void addItems(ArrayList<mObject> cats) {
     mArray.addAll(cats);
     notifyDataSetChanged();
   }
 
-  public void clear() {
-    mArray.clear();
-    notifyDataSetChanged();
-  }
 
-  public mObject getItemAtPosition(int position) {
-    return mArray.get(position);
-  }
 
+  //ViewHolder class
   public static class RecyclerViewHolder extends RecyclerView.ViewHolder {
 
+    // Declare the Views
     ImageView rvImage;
     TextView rvText;
 
+    // In the constructor for the ViewHolder class, we pass in a view, and send it to our superclass.
     public RecyclerViewHolder(View view) {
       super(view);
 
+      //We  hook our views objects with their counterparts in the layout.
       rvImage = (ImageView) view.findViewById(R.id.rv_image);
       rvText = (TextView) view.findViewById(R.id.rv_text);
     }
